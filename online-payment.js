@@ -20,6 +20,9 @@ form.addEventListener("submit", function(e) {
   stepPayment.classList.remove("hidden");
 });
 
+const confirmText = document.getElementById("confirmText");
+const confirmLoader = document.getElementById("confirmLoader");
+
 confirmBtn.addEventListener("click", async function() {
 
   const transactionId = document.getElementById("transactionId").value;
@@ -29,12 +32,18 @@ confirmBtn.addEventListener("click", async function() {
     return;
   }
 
+  // 🔥 Start loading state
+  confirmBtn.disabled = true;
+  confirmText.textContent = "Submitting...";
+  confirmLoader.classList.remove("hidden");
+
   const finalData = {
     ...paymentData,
     transactionId
   };
 
   try {
+
     const response = await fetch("https://sjkma-backend.onrender.com/api/payments/create", {
       method: "POST",
       headers: {
@@ -53,5 +62,10 @@ confirmBtn.addEventListener("click", async function() {
   } catch (err) {
     alert("Server error");
   }
+
+  // 🔥 Restore button (in case of error)
+  confirmBtn.disabled = false;
+  confirmText.textContent = "Confirm Payment";
+  confirmLoader.classList.add("hidden");
 
 });
