@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact / Book a Demo — Sri Jai Krishna Music Academy</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">Sri Jai Krishna Music Academy</a>
+    <nav>
+      <a href="index.html#about">About</a>
+      <a href="payments.html">Payments</a>
+      <a href="courses.html">Courses</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="contact-page">
+
+  <!-- LEFT INFO -->
+  <section class="contact-info">
+    <h1>Hey! Tell us<br>what you want<br>to learn</h1>
+
+    <div class="contact-meta">
+      <p><strong>Location</strong><br>SR Nagar, Hyderabad</p>
+      <p><strong>Email</strong><br>mailapallikrishnamohan7@gmail.com</p>
+      <p><strong>Phone</strong><br>+91 9848769099 <br> +91 9032529099</p>
+
+      <p>
+        <strong>WhatsApp</strong><br>
+        <a
+          href="https://wa.me/919848769099?text=Hi%20I%20want%20to%20book%20a%20demo%20at%20Sri%20Jai%20Krishna%20Music%20Academy"
+          target="_blank"
+          class="whatsapp-link"
+        >
+          Chat on WhatsApp →
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="contact-form">
+    <form id="enrollForm" novalidate>
+
+      <div class="interest-group">
+        <p class="label">I'm interested in</p>
+
+        <div class="chips">
+          <button type="button" class="chip">Carnatic Vocal</button>
+          <button type="button" class="chip">Annamayya Keerthanalu</button>
+          <button type="button" class="chip">Keyboard / Piano</button>
+          <button type="button" class="chip">Guitar</button>
+          <button type="button" class="chip">Veena</button>
+          <button type="button" class="chip">Violin</button>
+          <button type="button" class="chip">Flute</button>
+          
+        </div>
+
+        <input type="hidden" name="interest" id="interest">
+        <span class="error">Please select at least one option.</span>
+      </div>
+
+      <div class="field">
+        <input type="text" name="name" placeholder="Your name" required>
+        <span class="error">Please fill out this field.</span>
+      </div>
+
+      <div class="field">
+        <input type="email" name="email" placeholder="Your email" required>
+        <span class="error">Please fill out this field.</span>
+      </div>
+
+      <div class="field">
+        <textarea name="message" placeholder="Tell us about your goals" rows="4" required></textarea>
+        <span class="error">Please fill out this field.</span>
+      </div>
+
+      <button type="submit" class="submit-btn">
+        Send Request →
+      </button>
+
+      <p class="form-status" id="formStatus"></p>
+    </form>
+  </section>
+
+</main>
+
+<!-- ✅ FOOTER MOVED OUTSIDE MAIN -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-col">
+      <h4>Sri Jai Krishna Music Academy</h4>
+      <p>
+        Traditional Indian classical music education with
+        20+ years of teaching excellence.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h5>Courses</h5>
+      <ul>
+        <li>Carnatic Vocal Music</li>
+        <li>Annamayya Keerthanalu</li>
+        <li>Keyboard & Piano</li>
+        <li>Guitar</li>
+        <li>Flute</li>
+        <li>Veena</li>
+        <li>Violin</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <p>
+        +91 9848769099 <br>
+        +91 9032529099
+      </p>
+      <a href="contact.html" class="footer-cta">Book a Demo →</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © Sri Jai Krishna Music Academy
+  </div>
+</footer>
+
+<script src="contact.js"></script>
+</body>
+</html>

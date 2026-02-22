@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Payment — Sri Jai Krishna Music Academy</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="online-payment.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">Sri Jai Krishna Music Academy</a>
+    <nav>
+      <a href="index.html#about">About</a>
+      <a href="payments.html">Payments</a>
+      <a href="courses.html">Courses</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<main class="payment-container">
+
+  <!-- STEP 1 : FORM -->
+  <section id="step-form" class="payment-card">
+    <h1>Online Fee Payment</h1>
+
+    <form id="paymentForm">
+
+      <input type="text" placeholder="Student Name" id="studentName" required>
+      <input type="text" placeholder="Phone Number" id="phone" required>
+      <input type="text" placeholder="Course Name" id="course" required>
+      <input type="number" placeholder="Amount (₹)" id="amount" required>
+
+      <button type="submit">Proceed to Payment</button>
+    </form>
+  </section>
+
+
+  <!-- STEP 2 : QR / BANK -->
+  <section id="step-payment" class="payment-card hidden">
+    <h2>Complete Your Payment</h2>
+
+    <div class="qr-box">
+      <img src="images/UPI-QR.jpg" alt="UPI QR" />
+    </div>
+
+    <p>OR</p>
+
+    <div class="bank-details">
+      <p><strong>Bank Name:</strong>KOTAK811</p>
+      <p><strong>Account Name:</strong>MAILAPALLI JEYADEV</p>
+      <p><strong>Account No:</strong>5650352424</p>
+      <p><strong>IFSC:</strong>KKBK0007511</p>
+    </div>
+
+    <input type="text" placeholder="Enter Transaction ID after payment" id="transactionId">
+
+    <button id="confirmPayment">Submit Transaction</button>
+  </section>
+
+
+  <!-- STEP 3 : THANK YOU -->
+  <section id="step-success" class="payment-card hidden">
+    <h2>Payment Submitted</h2>
+    <p>
+      Thank you for submitting your payment details.
+      Our team will verify and confirm shortly.
+    </p>
+    <a href="index.html" class="home-btn">Back to Home</a>
+  </section>
+
+</main>
+
+<script src="online-payment.js"></script>
+</body>
+</html>

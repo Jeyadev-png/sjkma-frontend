@@ -1,0 +1,258 @@
+:root {
+  --bg: #f7f7f5;
+  --text: #111;
+  --muted: #666;
+  --accent: #b08a3c;
+  --border: #e5e5e5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+.admin-header {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-brand h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+}
+
+.admin-sub {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid var(--text);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding-bottom: 3px;
+  transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ===============================
+   DASHBOARD
+================================ */
+
+.dashboard-wrapper {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+
+/* ===============================
+   FILTER BUTTONS
+================================ */
+
+.filters {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.filter-btn {
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  border: 1px solid #000;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #000;
+  color: #fff;
+}
+
+/* ===============================
+   TABLE
+================================ */
+
+.table-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.05);
+}
+
+.payments-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.payments-table thead {
+  background: #fafafa;
+  border-bottom: 1px solid var(--border);
+}
+
+.payments-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 500;
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.payments-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.payments-table tr:hover {
+  background: #f9f9f9;
+}
+
+/* ===============================
+   STATUS BADGES
+================================ */
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.status-Pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-Success {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-Rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* ===============================
+   ACTION BUTTONS
+================================ */
+
+.action-btn {
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border: 1px solid #000;
+  background: none;
+  cursor: pointer;
+  margin-right: 6px;
+  transition: 0.3s ease;
+}
+
+.action-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ===============================
+   EMPTY STATE
+================================ */
+
+.empty-state {
+  display: none;
+  text-align: center;
+  padding: 3rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+  .payments-table {
+    font-size: 0.75rem;
+  }
+
+  .dashboard-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+  }
+}
+
+/* ===========================
+   ANALYTICS SECTION
+=========================== */
+
+.analytics-section {
+  margin-bottom: 4rem;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.analytics-card {
+  background: #fff;
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.analytics-card p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.analytics-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+}

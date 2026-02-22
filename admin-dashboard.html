@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — Sri Jai Krishna Music Academy</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="admin-header">
+    <div class="admin-brand">
+      <h1>Sri Jai Krishna Music Academy</h1>
+      <p class="admin-sub">Admin Dashboard</p>
+    </div>
+
+    <button id="logoutBtn" class="logout-btn">
+      Logout
+    </button>
+  </header>
+
+  <!-- MAIN -->
+  <main class="dashboard-wrapper">
+
+    <div class="dashboard-top">
+      <section class="analytics-section">
+        <div class="analytics-grid">
+          <div class="analytics-card">
+            <p>Total Revenue</p>
+            <h3 id="totalRevenue">₹0</h3>
+          </div>
+
+          <div class="analytics-card">
+            <p>Pending Amount</p>
+            <h3 id="pendingAmount">₹0</h3>
+          </div>
+
+          <div class="analytics-card">
+            <p>Total Payments</p>
+            <h3 id="totalPayments">0</h3>
+          </div>
+
+          <div class="analytics-card">
+            <p>Pending Count</p>
+            <h3 id="pendingCount">0</h3>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="section-title">Payment Submissions</h2>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="All">All</button>
+        <button class="filter-btn" data-filter="Pending">Pending</button>
+        <button class="filter-btn" data-filter="Success">Success</button>
+        <button class="filter-btn" data-filter="Rejected">Rejected</button>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="payments-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Course</th>
+            <th>Amount</th>
+            <th>Txn ID</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="paymentsBody"></tbody>
+      </table>
+
+      <div id="emptyState" class="empty-state">
+        No payments found
+      </div>
+    </div>
+
+
+    <!-- PAYMENTS TABLE -->
+    <!-- <div class="table-wrapper">
+      <table class="payments-table">
+        <thead>
+          <tr>
+            <th>Student</th>
+            <th>Phone</th>
+            <th>Course</th>
+            <th>Amount</th>
+            <th>Transaction ID</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="paymentsTableBody">
+          <!-- Data loads here -->
+        </tbody>
+      </table>
+
+      <div id="emptyState" class="empty-state">
+        No payment records found.
+      </div>
+
+    </div> -->
+
+  </main>
+
+  <script src="admin-dashboard.js"></script>
+</body>
+</html>

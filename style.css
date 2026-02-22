@@ -1,0 +1,475 @@
+:root {
+  --bg: #f7f7f5;
+  --text: #111;
+  --muted: #666;
+  --accent: #b08a3c;
+}
+
+/* ===============================
+   RESET
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg);
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.9rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* .site-header:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.site-header:hover nav a {
+  transform: scale(1.05);
+  color: var(--accent);
+} */
+
+/* ===============================
+   HERO BACKGROUND
+================================ */
+
+.hero-bg {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg-layer {
+  position: absolute;
+  inset: 0;
+  background-image: url("images/hero-bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.05);
+  z-index: 0;
+}
+
+.hero-bg-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0,0,0,0.55) 0%,
+    rgba(0,0,0,0.45) 35%,
+    rgba(0,0,0,0.65) 100%
+  );
+}
+
+/* ===============================
+   HERO CONTENT
+================================ */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 140px;
+  padding-inline: 2rem;
+  text-align: center;
+  color: #fff;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.hero {
+  padding-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.8rem;
+  display: inline-block;
+}
+
+.hero-eyebrow::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 1px;
+  background: var(--accent);
+  margin: 1.2rem auto 0;
+}
+
+.hero-text-wrapper {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.hero-text {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.2rem, 6.5vw, 5.8rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  max-width: 900px;
+  margin-inline: auto;
+  color: #fff;
+  text-align: center;
+  transition: opacity 0.55s ease, transform 0.5s ease;
+  text-shadow: 0 6px 22px rgba(0,0,0,0.35);
+}
+
+.hero-text.quote {
+  position: absolute;
+  inset: 0;
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-sub {
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  max-width: 760px;
+  margin: 0 auto 3rem;
+}
+
+.cta {
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 3px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.cta:hover {
+  color: var(--accent);
+}
+
+.hero-trust {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ===============================
+   CONTENT SECTIONS
+================================ */
+
+.content-section {
+  max-width: 900px;
+  margin: auto;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.content-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.content-section p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ===============================
+   COURSES
+================================ */
+
+.courses-reino {
+  padding: 8rem 0;
+}
+
+.courses-label {
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  color: var(--muted);
+}
+
+.course-row {
+  display: block;
+  padding: 3.5rem 2rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.1rem, 5vw, 4rem);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  border-top: 1px solid #ddd;
+  cursor: pointer;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.course-row:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.course-row:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ===============================
+   FOUNDER
+================================ */
+
+.founder-section {
+  padding: 8rem 2rem;
+}
+
+.founder-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.founder-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.founder-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.founder-desc {
+  margin-bottom: 1.5rem;
+}
+
+.founder-about {
+  color: var(--muted);
+  max-width: 420px;
+  line-height: 1.7;
+}
+
+.founder-note {
+  margin-top: 2rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.founder-image img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+
+.footer {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1024px) {
+  .hero-text {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 110px;
+  }
+
+  .hero-text {
+    font-size: clamp(2.4rem, 8vw, 3.2rem);
+    line-height: 1.15;
+  }
+
+  .content-section {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .founder-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .founder-about {
+    margin: auto;
+  }
+
+  .hero-bg-layer {
+    background-position: center top;
+  }
+}
+/* ===============================
+   MOBILE STICKY CTA
+================================ */
+
+.mobile-cta {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-cta {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+
+    padding: 14px 28px;
+    border-radius: 999px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  }
+}
+/* ===============================
+   GLOBAL FOOTER
+================================ */
+
+.site-footer {
+  background: #111;
+  color: #eee;
+  padding: 4rem 2rem 2rem;
+  margin-top: 6rem;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.footer-col h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.footer-col h5 {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #bbb;
+}
+
+.footer-col p,
+.footer-col li {
+  font-size: 0.9rem;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.logo {
+  text-decoration: none;
+  color: black;
+}
+

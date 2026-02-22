@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login — Sri Jai Krishna Music Academy</title>
+
+  <!-- Fonts (same as entire website) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="admin-login.css">
+</head>
+
+<body>
+
+  <div class="login-wrapper">
+
+    <div class="login-card">
+
+      <!-- Academy Branding -->
+      <h1 class="academy-name">
+        Sri Jai Krishna<br>Music Academy
+      </h1>
+
+      <p class="admin-label">Admin Portal</p>
+
+      <!-- LOGIN FORM -->
+      <form id="adminLoginForm" autocomplete="off">
+
+        <div class="field">
+          <input 
+            type="email" 
+            id="email" 
+            placeholder="Admin Email" 
+            required 
+            autocomplete="username"
+          />
+        </div>
+
+        <div class="field">
+          <input 
+            type="password" 
+            id="password" 
+            placeholder="Password" 
+            required 
+            autocomplete="current-password"
+          />
+        </div>
+
+        <button type="submit" class="login-btn">
+          Login
+        </button>
+
+        <p class="status" id="status"></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- JS -->
+  <script src="admin-login.js"></script>
+</body>
+</html>

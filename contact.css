@@ -1,0 +1,285 @@
+:root {
+  --bg: #f7f7f5;
+  --text: #111;
+  --muted: #666;
+  --error: #d33;
+}
+
+/* ===============================
+   RESET
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg);
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  font-family: 'Inter', sans-serif;
+  margin-left: 2rem;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   PAGE LAYOUT
+================================ */
+
+.contact-page {
+  padding-top: 160px;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* ===============================
+   LEFT INFO
+================================ */
+
+.contact-info h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 3rem;
+}
+
+.contact-meta p {
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+}
+
+.contact-meta strong {
+  font-weight: 600;
+}
+
+/* ===============================
+   FORM
+================================ */
+
+.contact-form {
+  width: 100%;
+}
+
+.label {
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+/* ===============================
+   CHIPS
+================================ */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.chip {
+  font-family: 'Inter', sans-serif;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid #ddd;
+  background: transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.chip.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* ===============================
+   FIELDS
+================================ */
+
+.field {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+input,
+textarea {
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  padding: 0.8rem 0;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #000;
+}
+
+.error {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: var(--error);
+  margin-top: 0.4rem;
+  display: none;
+}
+
+/* ===============================
+   SUBMIT
+================================ */
+
+.submit-btn {
+  font-family: 'Inter', sans-serif;
+  margin-top: 2rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.3rem;
+}
+
+/* ===============================
+   STATUS
+================================ */
+
+.form-status {
+  font-family: 'Inter', sans-serif;
+  margin-top: 1.5rem;
+  color: var(--muted);
+}
+
+/* ===============================
+   WHATSAPP LINK
+================================ */
+
+.whatsapp-link {
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 900px) {
+  .contact-page {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===============================
+   GLOBAL FOOTER
+================================ */
+
+.site-footer {
+  background: #111;
+  color: #eee;
+  padding: 4rem 2rem 2rem;
+  margin-top: 6rem;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.footer-col h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.footer-col h5 {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #bbb;
+}
+
+.footer-col p,
+.footer-col li {
+  font-size: 0.9rem;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+.logo {
+  text-decoration: none;
+  color: black;
+}
