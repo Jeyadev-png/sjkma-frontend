@@ -32,7 +32,7 @@ confirmBtn.addEventListener("click", async function() {
     return;
   }
 
-  // 🔥 Start loading state
+  //  Start loading state
   confirmBtn.disabled = true;
   confirmText.textContent = "Submitting...";
   confirmLoader.classList.remove("hidden");
@@ -63,7 +63,7 @@ confirmBtn.addEventListener("click", async function() {
     alert("Server error");
   }
 
-  // 🔥 Restore button (in case of error)
+  //  Restore button (in case of error)
   confirmBtn.disabled = false;
   confirmText.textContent = "Confirm Payment";
   confirmLoader.classList.add("hidden");
